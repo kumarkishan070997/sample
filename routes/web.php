@@ -27,7 +27,7 @@ Route::fallback(function(){
 	return 'route not found';
 });
 Route::get('/sendmarkdownmail','CheckController@sendMarkdownMail')->name('send-markdown-mail');
-Route::get('/sendattachemntmail','CheckController@sendAttachmentMail')->name('send-attachment-mail');
+Route::get('/sendattachemntmail','CheckController@sendAttachmentMail')->name('send-attachment-mail'); 
 Route::get('/userdata','CheckController@UserData')->name('userdata');
 Route::get('/userrecord','UserController@userRecord')->name('userrecord');
 Route::get('/userremindermail','UserController@userReminderMail')->name('user-reminder-mail');
@@ -37,3 +37,10 @@ Route::get('/ckeditor',function(){
 });
 Route::post('/upload','UserController@uploadImage')->name('upload');
 Route::get('/trackdistance','UserController@trackDistance')->name('track-distance');
+Route::get('/carbonmethod','UserController@carbonDays');
+Route::get('/stringtoarray','UserController@stringToArray');
+Route::get('/stringtoobject','UserController@stringToObject');
+Route::get('/convertsecondstohoursminute','UserController@convert_seconds_to_hours_minutes_seconds');
+Route::get('/downloadzip','UserController@downloadZip')->name('download-zip');
+Route::get('/setstartendweek','UserController@setStartEndWeek')->name('startendofweek');
+Route::get('/statuslist','UserController@getStatus')->name('status-list');
